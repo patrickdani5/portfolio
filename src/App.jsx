@@ -307,7 +307,7 @@ export default function Portfolio() {
               boxShadow: "0 20px 60px rgba(59,130,246,0.25)",
               position: "relative",
             }}>
-              <img src="./patrickdani.jpg" alt="Patrick Daniel"
+              <img src="https://i.ibb.co/jvh6zW5N/file-00000000401c71f4abc21b1af1165784.png" alt="Patrick Daniel"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
                 onError={e => {
                   e.target.style.display = "none";
