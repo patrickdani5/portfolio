@@ -7,7 +7,7 @@ const SKILLS = [
   { category: "Backend", items: ["Python", "Django", "PHP", "Node.js", "MySQL"] },
   { category: "CMS & E-commerce", items: ["WordPress", "WooCommerce", "Paystack", "Flutterwave"] },
   { category: "Content & SEO", items: ["Content Writing", "SEO Optimization", "Blog Management", "Keyword Research"] },
-  { category: "Other Skills",items: ["API Integration", "Database Design", "Git", "Web Hosting", "Maintenance"] },
+  { category: "Other Skills", items: ["API Integration", "Database Design", "Git", "Web Hosting", "Maintenance"] },
 ];
 
 const PROJECTS = [
@@ -113,7 +113,7 @@ export default function Portfolio() {
   const [typed, setTyped] = useState("");
   const [titleIdx, setTitleIdx] = useState(0);
 
-  const titles = ["Full Stack Developer", "WordPress Expert", "Application Devloper",  "Content Writer", "Web Solutions Builder"];
+  const titles = ["Full Stack Developer", "WordPress Expert", "Content Writer", "Web Solutions Builder"];
 
   useEffect(() => {
     let i = 0;
@@ -174,8 +174,8 @@ export default function Portfolio() {
           .nav-desktop { display: none !important; }
           .ham-btn { display: block !important; }
           .mobile-nav { display: flex !important; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(6,13,31,0.98); z-index: 99; border-bottom: 1px solid rgba(59,130,246,0.2); }
-          .hero-wrap { flex-direction: column !important; }
-          .hero-photo-wrap { display: none !important; }
+          .hero-wrap { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+          .hero-photo-wrap { display: flex !important; justify-content: center !important; margin-top: 30px !important; }
           .about-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
           .contact-grid { grid-template-columns: 1fr !important; }
           h1.hero-h1 { font-size: 34px !important; }
@@ -261,7 +261,7 @@ export default function Portfolio() {
             </div>
 
             <h1 className="hero-h1" style={{ fontWeight: 900, lineHeight: 1.1, marginBottom: 16 }}>
-              Hi, I'm <span style={{ color: "#3b82f6" }}>Patrick Dani</span>
+              Hi, I'm <span style={{ color: "#3b82f6" }}>Patrick Daniel</span>
             </h1>
 
             <div className="typed-line" style={{ fontWeight: 700, marginBottom: 20, minHeight: 44 }}>
@@ -297,7 +297,7 @@ export default function Portfolio() {
                 </div>
               ))}
             </div>
-          </div>   
+          </div>
 
           {/* Photo */}
           <div className="hero-photo-wrap">
