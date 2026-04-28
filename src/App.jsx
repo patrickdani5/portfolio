@@ -175,7 +175,7 @@ export default function Portfolio() {
           .ham-btn { display: block !important; }
           .mobile-nav { display: flex !important; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(6,13,31,0.98); z-index: 99; border-bottom: 1px solid rgba(59,130,246,0.2); }
           .hero-wrap { flex-direction: column !important; align-items: center !important; text-align: center !important; }
-          .hero-photo-wrap { display: flex !important; justify-content: center !important; margin-top: 30px !important; }
+          .hero-photo-wrap { display: flex !important; justify-content: center !important; width: 100% !important; margin-top: 30px !important; animation: none !important; }
           .about-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
           .contact-grid { grid-template-columns: 1fr !important; }
           h1.hero-h1 { font-size: 34px !important; }
@@ -246,7 +246,7 @@ export default function Portfolio() {
           color: "rgba(59,130,246,0.12)", lineHeight: 2.2,
           userSelect: "none", pointerEvents: "none",
         }}>
-          {`const patrick = {\n  role: "Full Stack Dev",\n  skills: ["React","Django",\n    "WordPress","MySQL"],\n  available: true,\n};\n\nfunction build(idea) {\n  return solve(idea);\n}`}
+          {`const patrick = {\n role: "Full Stack Dev",\n skills: ["React","Django",\n "WordPress","MySQL"],\n available: true,\n};\n\nfunction build(idea) {\n return solve(idea);\n}`}
         </div>
 
         <div className="hero-wrap" style={{ width: "100%" }}>
@@ -302,28 +302,27 @@ export default function Portfolio() {
           {/* Photo */}
           <div className="hero-photo-wrap">
             <div style={{
-              width: 300, height: 380, borderRadius: 24, overflow: "hidden",
+              width: "min(300px, 80vw)",
+              height: "min(380px, 80vw)",
+              borderRadius: 24, overflow: "hidden",
               border: "3px solid rgba(59,130,246,0.4)",
               boxShadow: "0 20px 60px rgba(59,130,246,0.25)",
               position: "relative",
+              margin: "0 auto",
             }}>
-              <img src="https://i.ibb.co/jvh6zW5N/file-00000000401c71f4abc21b1af1165784.png" alt="Patrick Daniel"
+              <img
+                src="https://i.ibb.co/jvh6zW5N/file-00000000401c71f4abc21b1af1165784.png"
+                alt="Patrick Daniel"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
-                onError={e => {
-                  e.target.style.display = "none";
-                  e.target.parentElement.style.cssText += "background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(16,185,129,0.1));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;";
-                  const d = document.createElement("div");
-                  d.innerHTML = '<div style="font-size:80px">👨‍💻</div><div style="font-family:monospace;font-size:12px;color:rgba(59,130,246,0.8)">&lt;PatrickDaniel /&gt;</div>';
-                  e.target.parentElement.appendChild(d);
-                }}
               />
+              {/* React badge inside photo */}
+              <div style={{
+                position: "absolute", bottom: 12, right: 12,
+                background: "rgba(16,185,129,0.85)", border: "1px solid rgba(16,185,129,0.4)",
+                borderRadius: 10, padding: "6px 12px", fontSize: 12, color: "white",
+                fontWeight: 600,
+              }}>⚡ React.js</div>
             </div>
-            <div style={{
-              marginTop: -360, marginLeft: 260,
-              background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.4)",
-              borderRadius: 10, padding: "8px 14px", fontSize: 12, color: "#10b981",
-              fontWeight: 600, display: "inline-block",
-            }}>⚡ React.js</div>
           </div>
         </div>
       </section>
